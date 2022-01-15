@@ -1,0 +1,27 @@
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/r/Assignments (master)
+$ git remote add orgin git@github.com:Pandurang-Prabhu/PandurangBPrabhu_JFS.git
+error: remote orgin already exists.
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/r/Assignments (master)
+$ git push orhin master
+fatal: 'orhin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/r/Assignments (master)
+$ git push orgin master
+Enumerating objects: 57, done.
+Counting objects: 100% (57/57), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (50/50), done.
+Writing objects: 100% (57/57), 5.45 KiB | 371.00 KiB/s, done.
+Total 57 (delta 21), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (21/21), done.
+To github.com:Pandurang-Prabhu/PandurangBPrabhu_JFS.git
+ * [new branch]      master -> master
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/r/Assignments (master)
+$
+

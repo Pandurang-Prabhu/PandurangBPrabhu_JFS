@@ -1,0 +1,180 @@
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/New folder (2)
+$ mkdir Assignments
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/New folder (2)
+$ cd Assignments
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/New folder (2)/Assignments
+$ git init
+Initialized empty Git repository in C:/Users/pandu/Desktop/New folder (2)/Assignments/.git/
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/New folder (2)/Assignments (master)
+$ touch README.txt
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/New folder (2)/Assignments (master)
+$
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/New folder (2)/Assignments (master)
+$ git add README.txt
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/New folder (2)/Assignments (master)
+$ git commit -m "first commit of readme file"
+[master (root-commit) 4c4cda8] first commit of readme file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.txt
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/New folder (2)/Assignments (master)
+$ git branch html-assignments
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/New folder (2)/Assignments (master)
+$ git branch
+  html-assignments
+* master
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/New folder (2)/Assignments (master)
+$ git checkout html-assignments
+Switched to branch 'html-assignments'
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/New folder (2)/Assignments (html-assignments)
+$ git branch
+* html-assignments
+  master
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/New folder (2)/Assignments (html-assignments)
+$ git status
+On branch html-assignments
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        html1.html
+        index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/New folder (2)/Assignments (html-assignments)
+$ git add *.html
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/New folder (2)/Assignments (html-assignments)
+$ git commit -m "first commit of html file in html branch"
+[html-assignments 16804ea] first commit of html file in html branch
+ 2 files changed, 20 insertions(+)
+ create mode 100644 html1.html
+ create mode 100644 index.html
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/New folder (2)/Assignments (html-assignments)
+$ git status
+On branch html-assignments
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   html1.html
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/New folder (2)/Assignments (html-assignments)
+$ git add *.html
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/New folder (2)/Assignments (html-assignments)
+$ git commit -m "second commit of html file in html branch"
+[html-assignments ea75f13] second commit of html file in html branch
+ 2 files changed, 3 insertions(+), 2 deletions(-)
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/New folder (2)/Assignments (html-assignments)
+$ git checkout master
+Switched to branch 'master'
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/New folder (2)/Assignments (master)
+$ git branch
+  html-assignments
+* master
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/New folder (2)/Assignments (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/New folder (2)/Assignments (master)
+$ git add README.txt
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/New folder (2)/Assignments (master)
+$ git commit -m "second commit of readme file in master branch"
+[master 20d9ab6] second commit of readme file in master branch
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/New folder (2)/Assignments (master)
+$ git checkout html-assignments
+Switched to branch 'html-assignments'
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/New folder (2)/Assignments (html-assignments)
+$ git branch
+* html-assignments
+  master
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/New folder (2)/Assignments (html-assignments)
+$ git status
+On branch html-assignments
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   html1.html
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/New folder (2)/Assignments (html-assignments)
+$ git add *.html
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/New folder (2)/Assignments (html-assignments)
+$ git checkout master
+error: Your local changes to the following files would be overwritten by checkout:
+        html1.html
+        index.html
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/New folder (2)/Assignments (html-assignments)
+$ git commit -m "third commit of html file in html branch"
+[html-assignments 8bef38f] third commit of html file in html branch
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/New folder (2)/Assignments (html-assignments)
+$ git checkout master
+Switched to branch 'master'
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/New folder (2)/Assignments (master)
+$ git branch
+  html-assignments
+* master
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/New folder (2)/Assignments (master)
+$ ls
+README.txt
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/New folder (2)/Assignments (master)
+$ git merge html-assignments
+Merge made by the 'ort' strategy.
+ html1.html | 10 ++++++++++
+ index.html | 11 +++++++++++
+ 2 files changed, 21 insertions(+)
+ create mode 100644 html1.html
+ create mode 100644 index.html
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/New folder (2)/Assignments (master)
+$ ls
+README.txt  html1.html  index.html
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/New folder (2)/Assignments (master)
+$ git branch -d html-assignments
+Deleted branch html-assignments (was 8bef38f).
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/New folder (2)/Assignments (master)
+$ git branch
+* master
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/New folder (2)/Assignments (master)
+$

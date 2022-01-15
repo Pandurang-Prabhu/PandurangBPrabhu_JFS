@@ -1,0 +1,232 @@
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/New folder (2)
+$ mkdir project_dir
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/New folder (2)
+$ cd project_dir
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/New folder (2)/project_dir
+$ git init
+Initialized empty Git repository in C:/Users/pandu/Desktop/New folder (2)/project_dir/.git/
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/New folder (2)/project_dir (master)
+$ touch index.html
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/New folder (2)/project_dir (master)
+$ git  status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/New folder (2)/project_dir (master)
+$ git add index.html
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/New folder (2)/project_dir (master)
+$ git commit -m "first commit of index.html"
+[master (root-commit) 6c64989] first commit of index.html
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 index.html
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/New folder (2)/project_dir (master)
+$ touch info.txt
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/New folder (2)/project_dir (master)
+$ git  status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        info.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/New folder (2)/project_dir (master)
+$ touch .gitignore
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/New folder (2)/project_dir (master)
+$ git  status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/New folder (2)/project_dir (master)
+$ git add index.html
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/New folder (2)/project_dir (master)
+$ git commit -m "second commit of index.html"
+[master afd4a3b] second commit of index.html
+ 1 file changed, 10 insertions(+)
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/New folder (2)/project_dir (master)
+$ git log
+commit afd4a3b808e9d2bc83d6917c3497cb87c998303e (HEAD -> master)
+Author: Pandurang-Prabhu <pandurangprabhu1999@gmail.com>
+Date:   Fri Jan 14 20:39:55 2022 +0530
+
+    second commit of index.html
+
+commit 6c64989cef40459f4ff7d2be20f31c1b80c9b826
+Author: Pandurang-Prabhu <pandurangprabhu1999@gmail.com>
+Date:   Fri Jan 14 20:36:59 2022 +0530
+
+    first commit of index.html
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/New folder (2)/project_dir (master)
+$ git  status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/New folder (2)/project_dir (master)
+$ git  checkout -- index.html
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/New folder (2)/project_dir (master)
+$ git  status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/New folder (2)/project_dir (master)
+$ git  status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/New folder (2)/project_dir (master)
+$ git add index.html
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/New folder (2)/project_dir (master)
+$ git reset index.html
+Unstaged changes after reset:
+M       index.html
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/New folder (2)/project_dir (master)
+$ git  checkout -- index.html
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/New folder (2)/project_dir (master)
+$ git  status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/New folder (2)/project_dir (master)
+$ git config alias.my-add add
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/New folder (2)/project_dir (master)
+$ git my-add index.html
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/New folder (2)/project_dir (master)
+$ git  status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/New folder (2)/project_dir (master)
+$ git commit -m "third commit of index.html"
+[master e48a861] third commit of index.html
+ 1 file changed, 1 insertion(+)
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/New folder (2)/project_dir (master)
+$ git log
+commit e48a861f9931e2d712566938a8c14bbcaf6a4b64 (HEAD -> master)
+Author: Pandurang-Prabhu <pandurangprabhu1999@gmail.com>
+Date:   Fri Jan 14 20:46:09 2022 +0530
+
+    third commit of index.html
+
+commit afd4a3b808e9d2bc83d6917c3497cb87c998303e
+Author: Pandurang-Prabhu <pandurangprabhu1999@gmail.com>
+Date:   Fri Jan 14 20:39:55 2022 +0530
+
+    second commit of index.html
+
+commit 6c64989cef40459f4ff7d2be20f31c1b80c9b826
+Author: Pandurang-Prabhu <pandurangprabhu1999@gmail.com>
+Date:   Fri Jan 14 20:36:59 2022 +0530
+
+    first commit of index.html
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/New folder (2)/project_dir (master)
+$ git revert e48a861f9931e2d712566938a8c14bbcaf6a4b64
+[master 3b1b303] Revert "third commit of index.html"
+ 1 file changed, 1 deletion(-)
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/New folder (2)/project_dir (master)
+$ git log
+commit 3b1b3033c974972ae4746b17ddb6d6737f30ac36 (HEAD -> master)
+Author: Pandurang-Prabhu <pandurangprabhu1999@gmail.com>
+Date:   Fri Jan 14 21:05:10 2022 +0530
+
+    Revert "third commit of index.html"
+
+    This reverts commit e48a861f9931e2d712566938a8c14bbcaf6a4b64.
+
+commit e48a861f9931e2d712566938a8c14bbcaf6a4b64
+Author: Pandurang-Prabhu <pandurangprabhu1999@gmail.com>
+Date:   Fri Jan 14 20:46:09 2022 +0530
+
+    third commit of index.html
+
+commit afd4a3b808e9d2bc83d6917c3497cb87c998303e
+Author: Pandurang-Prabhu <pandurangprabhu1999@gmail.com>
+Date:   Fri Jan 14 20:39:55 2022 +0530
+
+    second commit of index.html
+
+commit 6c64989cef40459f4ff7d2be20f31c1b80c9b826
+Author: Pandurang-Prabhu <pandurangprabhu1999@gmail.com>
+Date:   Fri Jan 14 20:36:59 2022 +0530
+
+    first commit of index.html
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/New folder (2)/project_dir (master)

@@ -1,0 +1,211 @@
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/r/Assignments (master)
+$ git branch js-assignments
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/r/Assignments (master)
+$ git checkout js-assignments
+Switched to branch 'js-assignments'
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/r/Assignments (js-assignments)
+$ git branch
+* js-assignments
+  master
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/r/Assignments (js-assignments)
+$ git status
+On branch js-assignments
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        js1.js
+        js2.js
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/r/Assignments (js-assignments)
+$ git add *.js
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/r/Assignments (js-assignments)
+$ git commit -m "First commit for jss file jss branch"
+[js-assignments bd8822d] First commit for jss file jss branch
+ 2 files changed, 6 insertions(+)
+ create mode 100644 js1.js
+ create mode 100644 js2.js
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/r/Assignments (js-assignments)
+$ git status
+On branch js-assignments
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/r/Assignments (js-assignments)
+$ git add *.txt
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/r/Assignments (js-assignments)
+$ git commit -m "First commit for readme file jss branch"
+[js-assignments 7e35fb2] First commit for readme file jss branch
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/r/Assignments (js-assignments)
+$ git checkout master
+Switched to branch 'master'
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/r/Assignments (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/r/Assignments (master)
+$ git add *.txt
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/r/Assignments (master)
+$ git commit -m "First commit for readme file master branch"
+[master e8589dd] First commit for readme file master branch
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/r/Assignments (master)
+$ git checkout js-assignments
+Switched to branch 'js-assignments'
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/r/Assignments (js-assignments)
+$ git status
+On branch js-assignments
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   js1.js
+        modified:   js2.js
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/r/Assignments (js-assignments)
+$ git add *.js
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/r/Assignments (js-assignments)
+$ git commit -m "second commit for jss file jss branch"
+[js-assignments a32895a] second commit for jss file jss branch
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/r/Assignments (js-assignments)
+$ git checkout master
+Switched to branch 'master'
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/r/Assignments (master)
+$ git branch
+  js-assignments
+* master
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/r/Assignments (master)
+$ git merge js-assignments
+Auto-merging README.txt
+CONFLICT (content): Merge conflict in README.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/r/Assignments (master|MERGING)
+$ git status
+On branch master
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Changes to be committed:
+        new file:   js1.js
+        new file:   js2.js
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   README.txt
+
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/r/Assignments (master|MERGING)
+$ vi README.txt
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/r/Assignments (master|MERGING)
+$ git merge js-assignments
+error: Merging is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/r/Assignments (master|MERGING)
+$ git add .
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/r/Assignments (master|MERGING)
+$ git commit -m "resolved conflicts"
+[master 4c6fc0a] resolved conflicts
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/r/Assignments (master)
+$ git merge js-assignments
+Already up to date.
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/r/Assignments (master)
+$ ls
+README.txt  css1.css  css2.css  html1.html  index.html  js1.js  js2.js
+
+pandu@DESKTOP-9QPF49Q MINGW64 ~/Desktop/r/Assignments (master)
+$ git log
+commit 4c6fc0a6b0c0f7e16d57229c41034d431e5ed28d (HEAD -> master)
+Merge: e8589dd a32895a
+Author: Pandurang-Prabhu <pandurangprabhu1999@gmail.com>
+Date:   Sat Jan 15 14:03:32 2022 +0530
+
+    resolved conflicts
+
+commit a32895a0ab0ceb7b853e232700ace75d3123f1f0 (js-assignments)
+Author: Pandurang-Prabhu <pandurangprabhu1999@gmail.com>
+Date:   Sat Jan 15 13:56:19 2022 +0530
+
+    second commit for jss file jss branch
+
+commit e8589dd5793de0767d68e221285731fb421b2e4e
+Author: Pandurang-Prabhu <pandurangprabhu1999@gmail.com>
+Date:   Sat Jan 15 13:54:53 2022 +0530
+
+    First commit for readme file master branch
+
+commit 7e35fb23efb2b1e71f14ab420ba034532d028cb1
+Author: Pandurang-Prabhu <pandurangprabhu1999@gmail.com>
+Date:   Sat Jan 15 13:53:57 2022 +0530
+
+    First commit for readme file jss branch
+
+commit bd8822d9188700d96b00aef125c5e7eeef334e55
+Author: Pandurang-Prabhu <pandurangprabhu1999@gmail.com>
+Date:   Sat Jan 15 13:53:05 2022 +0530
+
+    First commit for jss file jss branch
+
+commit ce4200afd9345ccd15d6faf0296acca6bf54857c
+Merge: 4628281 c59f26f
+Author: Pandurang-Prabhu <pandurangprabhu1999@gmail.com>
+Date:   Sat Jan 15 01:34:51 2022 +0530
+
+    Merge branch 'css-assignments'
+
+commit c59f26f6e1f6365ecd6102998013022d077d8de3
+Author: Pandurang-Prabhu <pandurangprabhu1999@gmail.com>
+Date:   Sat Jan 15 01:26:40 2022 +0530
+
+    modified css file in css branch
+
+commit 4628281894a34691984c58693d9067dd14c4c8b3
+Author: Pandurang-Prabhu <pandurangprabhu1999@gmail.com>
+Date:   Sat Jan 15 01:24:42 2022 +0530
+
+    modified readme file in master
+
+commit 183e38234f330f88b9ef95627a9a63c6829870f1
+Author: Pandurang-Prabhu <pandurangprabhu1999@gmail.com>
+Date:   Sat Jan 15 01:23:27 2022 +0530
+
+    modified readme file in css
+
+commit 0847d9c0c545b124a273394cd6dadd7359888df6
+:
